@@ -91,7 +91,7 @@ function ShortBladeCard({ verse, index }: { verse: ShortBlade; index: number }) 
         <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
           {verse.reference}
         </p>
-        <blockquote className="text-muted-foreground border-l-2 border-muted pl-3 text-sm leading-relaxed italic line-clamp-3">
+        <blockquote className="text-muted-foreground border-l-2 border-muted pl-3 text-sm leading-relaxed italic">
           {verse.text}
         </blockquote>
       </button>
