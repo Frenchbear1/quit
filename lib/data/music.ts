@@ -23,7 +23,7 @@ export const musicTracks: MusicTrack[] = [
     id: "m2",
     title: "Way Maker",
     artist: "Sinach / Leeland",
-    url: "https://youtu.be/iJCV_2H9xD0?si=XjN6Q7BEdpgh2eVQ",
+    url: "https://youtu.be/iJCV_2H9xD0?si=sMefEwSQ8djkyyrw&t=7",
     category: "worship",
     tags: ["breakthrough", "faith", "presence"],
     description: "When you feel stuck, remember He makes a way."
@@ -290,7 +290,7 @@ export const musicTracks: MusicTrack[] = [
     id: "m36",
     title: "Beautiful Piano Worship",
     artist: "Instrumental Worship",
-    url: "https://youtu.be/WQcbbKC5Tyw?si=ovWIeqgbf1mCeatT&t=3",
+    url: "https://youtu.be/WQcbbKC5Tyw?si=NzX3XQYobKh9mF8A&t=3",
     category: "instrumental",
     tags: ["peace", "prayer", "autoplay"],
     description: "Let this peaceful worship fill your mind as you open the app."

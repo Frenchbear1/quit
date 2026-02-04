@@ -4,23 +4,21 @@ import { useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { HomeScreen } from "./home-screen";
 import { TabsView } from "./tabs-view";
-import { MiniPlayer } from "./mini-player";
 import { GlobalMusicPlayer } from "./global-music-player";
 import { useQuitStorage } from "@/hooks/use-quit-storage";
-import { autoplayTrack, type MusicTrack } from "@/lib/data/music";
+import type { MusicTrack } from "@/lib/data/music";
 
 type View = "home" | "tabs";
 
 export function QuitApp() {
   const [view, setView] = useState<View>("home");
   const [mounted, setMounted] = useState(false);
-  
+
   // Global music state
   const [currentTrack, setCurrentTrack] = useState<MusicTrack | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showFullscreen, setShowFullscreen] = useState(false);
-  const [hasAutoPlayed, setHasAutoPlayed] = useState(false);
-  
+
   const {
     data,
     isLoaded,
@@ -35,23 +33,14 @@ export function QuitApp() {
     setMounted(true);
   }, []);
 
-  // Auto-play on first mount
-  useEffect(() => {
-    if (mounted && isLoaded && !hasAutoPlayed && autoplayTrack) {
-      setCurrentTrack(autoplayTrack);
-      setIsPlaying(true);
-      setHasAutoPlayed(true);
-    }
-  }, [mounted, isLoaded, hasAutoPlayed]);
-
   const handlePlayTrack = useCallback((track: MusicTrack) => {
     setCurrentTrack(track);
     setIsPlaying(true);
-    setShowFullscreen(true);
+    setShowFullscreen(false); // keep it playing in the background
   }, []);
 
   const handleTogglePlay = useCallback(() => {
-    setIsPlaying(prev => !prev);
+    setIsPlaying((prev) => !prev);
   }, []);
 
   const handleClosePlayer = useCallback(() => {
