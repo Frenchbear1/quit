@@ -14,22 +14,12 @@ export const metadata: Metadata = {
   description: 'Stop lying to yourself. Quit porn.',
   generator: 'v0.app',
   applicationName: 'QUIT',
-  manifest: withBase('/manifest.webmanifest'),
   appleWebApp: {
     capable: true,
     title: 'QUIT',
     statusBarStyle: 'black-translucent',
   },
-  icons: {
-    icon: [
-      { url: withBase('/icons/icon-192x192.png'), sizes: '192x192', type: 'image/png' },
-      { url: withBase('/icons/icon-512x512.png'), sizes: '512x512', type: 'image/png' },
-      { url: withBase('/icons/icon-512x512.png'), type: 'image/png' },
-    ],
-    apple: [
-      { url: withBase('/icons/apple-touch-icon.png'), sizes: '180x180', type: 'image/png' },
-    ],
-  },
+
 }
 
 export default function RootLayout({
