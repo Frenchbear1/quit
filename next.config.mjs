@@ -10,8 +10,8 @@ const nextConfig = {
   },
   output: "export",
   trailingSlash: true,
-  basePath: isProd ? "/quit" : "",
-  assetPrefix: isProd ? "/quit/" : "",
+  basePath: isProd ? "/QUIT" : "",
+  assetPrefix: isProd ? "/QUIT/" : "",
 }
 
 export default nextConfig
