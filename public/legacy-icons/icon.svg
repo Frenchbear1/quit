@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <rect x="0" y="0" width="512" height="512" rx="96" ry="96" fill="#9b9b9b"/>
-  <text x="256" y="300"
-        text-anchor="middle"
-        font-size="160"
-        font-family="Inter, Arial, Helvetica, sans-serif"
-        font-weight="700"
-        fill="#ffffff">QUIT</text>
-</svg>
