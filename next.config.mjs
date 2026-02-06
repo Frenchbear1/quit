@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === "production";
+const isVercel = !!process.env.VERCEL;
 
 const nextConfig = {
   typescript: {
@@ -10,8 +11,8 @@ const nextConfig = {
   },
   output: "export",
   trailingSlash: true,
-  basePath: isProd ? "/QUIT" : "",
-  assetPrefix: isProd ? "/QUIT/" : "",
+  basePath: isProd && !isVercel ? "/QUIT" : "",
+  assetPrefix: isProd && !isVercel ? "/QUIT/" : "",
 }
 
 export default nextConfig
